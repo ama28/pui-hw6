@@ -1,38 +1,266 @@
-.App {
-  text-align: center;
+* {
+  margin: 0px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.body {
+  font-size: medium;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header{
+  display: flex;
+  width: 100%;
+  margin: 0px 0px 30px 0px;
+  padding: 0px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.logo-container {
+  width: 30%;
+  margin: 20px 20px 0px 20px;
+}
+
+.header-detail {
+ flex: 1 1 auto;
+}
+
+.nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 50%;
+  border-bottom: solid 5px black;
+  padding: 0px 80px;
+}
+
+.nav a {
+  margin: 0px 40px;
+  font-size: 20px;
+  font-weight: normal;
+  text-decoration: none;
+  color: black;
+}
+
+.cartContainer {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 10px 150px;
+  border-top: 5px solid gray;
+  border-bottom: 5px solid gray;
+  box-sizing: border-box;
+}
+
+.cartHeader {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.cartItem {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 200px;
+  margin: 10px 10px;
+  text-align: center;
+  line-height: 20px;
+}
+
+.cartItem img {
+  border: 2px solid black;
+  margin-bottom: 10px ;
+}
+
+.cartItem button {
+  border: none;
+  background: none;
+  text-decoration: underline;
+  margin-top: 10px;
+}
+
+.cart{
+  position: relative;
+}
+
+#cart-display {
+  position: absolute;
+  text-align: right;
+  right: 0px;
+  padding-top: 5px;
+}
+
+#popup {
+  position: absolute;
+  background-color: white;
+  font-size: 12px;
+  padding: 5px;
+  width: 145px;
+  right: -50px;
+  border: solid 1px black;
+  visibility: visible;
+}
+
+.header-description {
+  height: 50%;
+  display: flex;
+  align-items: flex-end;
+}
+
+h1 {
+  font-weight: normal;
+  font-size: 30px;
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 20px;
+  margin: 10px 0px;
+}
+
+.item h2 {
+  margin-bottom: 20px;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  background-color: #f8ff00;
+}
+
+.items-container {
+  display: flex;
+  flex: 1 1 auto;
+  flex-wrap: wrap;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin: 0px 8% 20px 8%;
 }
 
-.App-link {
-  color: #61dafb;
+.items-container h1 {
+  margin-top: 50px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.item {
+  margin: 40px 15px;
+  width: 30%;
+}
+
+.item-title {
+  font-weight: bold;
+}
+
+.item img {
+  border: 2px black solid;
+}
+
+.selector {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0px;
+}
+
+.options {
+  display: flex;
+  border: 2px solid black;
+  justify-content: space-between;
+  align-items: center;
+  width: 60%;
+  box-sizing: border-box;
+  background-color: white;
+}
+
+.options.dropdown {
+  padding: 5px 5px;
+}
+
+.options.count {
+  border: 0px;
+}
+
+.options.cart {
+  justify-content: center;
+  margin: 10px 0px;
+}
+
+/* .number {
+  border: 2px solid black;
+  width: 18%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 0px;
+} */
+/* 
+.number.selected {
+  background-color: #d3d3d3;
+} */
+
+.selector h2 {
+  margin: 8px 0px;
+  color: black;
+}
+
+.cart a{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.radioButton {
+  appearance: none;
+  width: 100%;
+  height: 100%;
+  border: 0px;
+  background-color: white;
+}
+
+.radioButtonSelected {
+  background-color: lightgray;
+}
+
+.buttonContainer {
+  border: 2px solid black;
+  width: 18%;
+  height: 30px;
+}
+
+/* input:checked {
+  background-color: lightgray;
+} */
+
+.buttonContainer button:hover{
+  background-color: lightgray;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+label {
+  position: relative;
+  top: -28px;
+  left: 10px;
+  pointer-events: none;
+}
+
+.doubledigit {
+  left: 6px;
+}
+
+.searchContainer {
+  display: flex;
+  justify-content: flex-start;
+  flex: 1 1 auto;
+  margin: 20px 10% 0px 10%;
+  box-sizing: content-box;
+}
+
+.searchContainer form {
+  margin-right: 50px;
+}
+
+.searchContainer form input{
+  width: 300px;
 }
